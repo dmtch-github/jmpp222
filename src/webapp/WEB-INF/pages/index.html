@@ -10,6 +10,28 @@
     <th:block th:each="msg : ${messages}">
         <h1 th:text="${msg}"></h1>
     </th:block>
+
+    <h2>
+        <a href="cars.html">Get full list of cars</a>
+        <br>
+        <a href="cars.html?count=0">Get list of 0 cars</a>
+        <br>
+        <a href="cars.html?count=1">Get list of 1 cars</a>
+        <br>
+        <a href="cars.html?count=2">Get list of 2 cars</a>
+        <br>
+        <a href="cars.html?count=3">Get list of 3 cars</a>
+        <br>
+        <a href="cars.html?count=4">Get list of 4 cars</a>
+        <br>
+        <a href="cars.html?count=5">Get list of 5 cars</a>
+        <br>
+        <a href="cars.html?count=6">WRONG value! Get list of 6 cars</a>
+        <br>
+        <a href="cars.html?count=-1">WRONG value! Get list of -1 cars</a>
+        <br>
+        <a href="cars.html?count=QWE">WRONG value! Get list of QWE cars</a>
+    </h2>
 </div>
 </body>
 </html>
