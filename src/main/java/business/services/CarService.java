@@ -1,6 +1,6 @@
-package web.service;
+package business.services;
 
-import web.emptity.Car;
+import business.entities.Car;
 
 import java.util.List;
 

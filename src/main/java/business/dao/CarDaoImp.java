@@ -1,21 +1,12 @@
-package web.dao;
+package business.dao;
 
-import web.emptity.Car;
+import business.entities.Car;
+import business.entities.repositories.CarRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class CarDaoImp implements CarDao{
-    private List<Car> cars = new ArrayList<>();
-
-    public CarDaoImp() {
-        cars.add(new Car("Ferrary","Красное пламя",2017));
-        cars.add(new Car("Maserati","Желтый луч",2021));
-        cars.add(new Car("Bentley","Серый туман",2020));
-        cars.add(new Car("Rolls-Royce","Черная ночь",2018));
-        cars.add(new Car("Toyota","Джунгли",2015));
-    }
 
     /**
      * Метод возвращает список машин заданного количества
@@ -26,6 +17,7 @@ public class CarDaoImp implements CarDao{
      */
     @Override
     public List<Car> listCars(int count) {
+        List<Car> cars = CarRepository.getListCars();
         int i = count < 0? cars.size() : Math.min(count,cars.size());
         return cars.stream().limit(i).collect(Collectors.toList());
     }

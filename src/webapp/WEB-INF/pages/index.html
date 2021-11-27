@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title th:utext="#{index.page.title}">Main Page</title>
 </head>
 <body>
 <div>
@@ -11,27 +10,27 @@
         <h1 th:text="${msg}"></h1>
     </th:block>
 
-    <h2>
-        <a href="cars.html">Get full list of cars</a>
+    <h3>
+        <a href="cars.html" th:utext="#{link.list.cars.full}">Get full list of cars</a>
         <br>
-        <a href="cars.html?count=0">Get list of 0 cars</a>
+        <a href="cars.html?count=0" th:utext="#{link.list.cars.param} + ' ?count=0'">Get list of 0 cars</a>
         <br>
-        <a href="cars.html?count=1">Get list of 1 cars</a>
+        <a href="cars.html?count=1" th:utext="#{link.list.cars.param} + ' ?count=1'">Get list of 1 cars</a>
         <br>
-        <a href="cars.html?count=2">Get list of 2 cars</a>
+        <a href="cars.html?count=2" th:utext="#{link.list.cars.param} + ' ?count=2'">Get list of 2 cars</a>
         <br>
-        <a href="cars.html?count=3">Get list of 3 cars</a>
+        <a href="cars.html?count=3" th:utext="#{link.list.cars.param} + ' ?count=3'">Get list of 3 cars</a>
         <br>
-        <a href="cars.html?count=4">Get list of 4 cars</a>
+        <a href="cars.html?count=4" th:utext="#{link.list.cars.param} + ' ?count=4'">Get list of 4 cars</a>
         <br>
-        <a href="cars.html?count=5">Get list of 5 cars</a>
+        <a href="cars.html?count=5" th:utext="#{link.list.cars.param} + ' ?count=5'">Get list of 5 cars</a>
         <br>
-        <a href="cars.html?count=6">WRONG value! Get list of 6 cars</a>
+        <a href="cars.html?count=6" th:utext="#{exception} + ' ' + #{link.list.cars.param} + ' ?count=6'">Exception ?count=6</a>
         <br>
-        <a href="cars.html?count=-1">WRONG value! Get list of -1 cars</a>
+        <a href="cars.html?count=-1" th:utext="#{exception} + ' ' + #{link.list.cars.param} + ' ?count=-1'">Exception ?count=-1</a>
         <br>
-        <a href="cars.html?count=QWE">WRONG value! Get list of QWE cars</a>
-    </h2>
+        <a href="cars.html?count=QWE" th:utext="#{exception} + ' ' + #{link.list.cars.param} + ' ?count=QWE'">Exception ?count=QWE</a>
+    </h3>
 </div>
 </body>
 </html>

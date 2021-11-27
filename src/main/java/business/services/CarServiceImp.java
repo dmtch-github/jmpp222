@@ -1,8 +1,8 @@
-package web.service;
+package business.services;
 
-import web.dao.CarDao;
-import web.dao.CarDaoImp;
-import web.emptity.Car;
+import business.dao.CarDao;
+import business.dao.CarDaoImp;
+import business.entities.Car;
 
 import java.util.List;
 

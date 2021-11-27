@@ -1,6 +1,6 @@
-package web.dao;
+package business.dao;
 
-import web.emptity.Car;
+import business.entities.Car;
 
 import java.util.List;
 

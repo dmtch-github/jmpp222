@@ -1,4 +1,4 @@
-package web.emptity;
+package business.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
