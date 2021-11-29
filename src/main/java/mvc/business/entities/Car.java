@@ -1,4 +1,4 @@
-package business.entities;
+package mvc.business.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

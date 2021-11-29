@@ -1,6 +1,6 @@
-package business.entities.repositories;
+package mvc.business.entities.repositories;
 
-import business.entities.Car;
+import mvc.business.entities.Car;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +12,7 @@ public class CarRepository {
 
     static {
         ResourceBundle rb;
-        rb = ResourceBundle.getBundle("locale/messages/car", Locale.forLanguageTag("ru"));
+        rb = ResourceBundle.getBundle("locale/messages/business", Locale.forLanguageTag("ru"));
 
         cars.add(new Car(rb.getString("model.ferrari"),rb.getString("color.red"),2017));
         cars.add(new Car(rb.getString("model.maserati"),rb.getString("color.yellow"),2021));

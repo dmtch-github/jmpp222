@@ -1,11 +1,15 @@
-package business.dao;
+package mvc.business.dao;
 
-import business.entities.Car;
-import business.entities.repositories.CarRepository;
+import lombok.NoArgsConstructor;
+import mvc.business.entities.Car;
+import mvc.business.entities.repositories.CarRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@NoArgsConstructor
+@Repository
 public class CarDaoImp implements CarDao{
 
     /**
@@ -18,7 +22,7 @@ public class CarDaoImp implements CarDao{
     @Override
     public List<Car> listCars(int count) {
         List<Car> cars = CarRepository.getListCars();
-        int i = count < 0? cars.size() : Math.min(count,cars.size());
-        return cars.stream().limit(i).collect(Collectors.toList());
+        int min = count < 0? cars.size() : Math.min(count,cars.size());
+        return cars.stream().limit(min).collect(Collectors.toList());
     }
 }

@@ -1,6 +1,6 @@
-package business.services;
+package mvc.business.services;
 
-import business.entities.Car;
+import mvc.business.entities.Car;
 
 import java.util.List;
 

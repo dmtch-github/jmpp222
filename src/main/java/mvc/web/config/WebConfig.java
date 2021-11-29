@@ -1,4 +1,4 @@
-package web.config;
+package mvc.web.config;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.MessageSource;
@@ -13,7 +13,7 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("web")
+@ComponentScan("mvc")
 public class WebConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
@@ -56,8 +56,7 @@ public class WebConfig implements WebMvcConfigurer {
         messageSource.setCacheSeconds(5); // время обновления ресурсов перевода - 5 секунд
         messageSource.setDefaultEncoding(CODE_PAGE);
         messageSource.setFallbackToSystemLocale(false); // если нет требуемой локали, то используется по умолчанию
-        messageSource.setBasenames("classpath:locale/messages/web"); // путь где хранятся переводы
+        messageSource.setBasenames("classpath:locale/messages/web"); // путь где хранятся переводы для сайта
         return messageSource;
     }
-
 }
